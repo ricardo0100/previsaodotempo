@@ -9,9 +9,11 @@
 import Foundation
 import SWXMLHash
 
-class ApiINPE {
+class ApiINPEController {
     
-    static func searchForCitiesWith(cityName: String) {
+    var delegate: SearchCityViewControllerDelegate?
+    
+    func searchForCitiesWith(cityName: String) {
         
         if let url = NSURL(string: "http://servicos.cptec.inpe.br/XML/listaCidades?city=\(cityName)") {
 
@@ -31,7 +33,9 @@ class ApiINPE {
                         
                         cityList.append(City(id: id, name: name, state: state))
                     }
-
+                    
+                    self.delegate!.listCitiesWith(cityList)
+                    
                 }
                 
             }).resume()
