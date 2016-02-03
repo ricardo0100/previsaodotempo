@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'Previsão do Tempo' do
+
+end
+
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'SWXMLHash', '~> 2.1.0'
