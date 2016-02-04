@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		B041C2E111DA33D34C776D85 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD40EEAAFE155C274C1227F /* Pods.framework */; };
 		BA07FF331C62CCC900D642F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07FF321C62CCC900D642F9 /* AppDelegate.swift */; };
-		BA07FF351C62CCC900D642F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07FF341C62CCC900D642F9 /* ViewController.swift */; };
 		BA07FF381C62CCC900D642F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA07FF361C62CCC900D642F9 /* Main.storyboard */; };
 		BA07FF3A1C62CCC900D642F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA07FF391C62CCC900D642F9 /* Assets.xcassets */; };
 		BA07FF3D1C62CCC900D642F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA07FF3B1C62CCC900D642F9 /* LaunchScreen.storyboard */; };
 		BA4C7A931C62CDF700D44FD8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C7A921C62CDF700D44FD8 /* City.swift */; };
 		BA4C7A951C62CE2A00D44FD8 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C7A941C62CE2A00D44FD8 /* APIController.swift */; };
 		BA4C7A971C62CE3F00D44FD8 /* SearchCityViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C7A961C62CE3F00D44FD8 /* SearchCityViewControllerDelegate.swift */; };
+		BA4C7A991C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,6 @@
 		AD3A51C3F379B227A53830EF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA07FF2F1C62CCC900D642F9 /* PrevisaoDoTempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrevisaoDoTempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA07FF321C62CCC900D642F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA07FF341C62CCC900D642F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA07FF371C62CCC900D642F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA07FF391C62CCC900D642F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA07FF3C1C62CCC900D642F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 		BA4C7A921C62CDF700D44FD8 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		BA4C7A941C62CE2A00D44FD8 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		BA4C7A961C62CE3F00D44FD8 /* SearchCityViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityViewControllerDelegate.swift; sourceTree = "<group>"; };
+		BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCitiesTableViewController.swift; sourceTree = "<group>"; };
 		E2398AF999B8F0EA53EE0B0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,12 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				BA4C7A901C62CDDB00D44FD8 /* API */,
-				BA07FF321C62CCC900D642F9 /* AppDelegate.swift */,
-				BA07FF341C62CCC900D642F9 /* ViewController.swift */,
+				BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */,
 				BA07FF361C62CCC900D642F9 /* Main.storyboard */,
-				BA07FF391C62CCC900D642F9 /* Assets.xcassets */,
-				BA07FF3B1C62CCC900D642F9 /* LaunchScreen.storyboard */,
-				BA07FF3E1C62CCC900D642F9 /* Info.plist */,
+				BA4C7A9A1C62D41C00D44FD8 /* Support Files */,
 			);
 			path = PrevisaoDoTempo;
 			sourceTree = "<group>";
@@ -103,6 +100,17 @@
 				BA4C7A961C62CE3F00D44FD8 /* SearchCityViewControllerDelegate.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		BA4C7A9A1C62D41C00D44FD8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA07FF321C62CCC900D642F9 /* AppDelegate.swift */,
+				BA07FF391C62CCC900D642F9 /* Assets.xcassets */,
+				BA07FF3B1C62CCC900D642F9 /* LaunchScreen.storyboard */,
+				BA07FF3E1C62CCC900D642F9 /* Info.plist */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4C7A951C62CE2A00D44FD8 /* APIController.swift in Sources */,
-				BA07FF351C62CCC900D642F9 /* ViewController.swift in Sources */,
 				BA07FF331C62CCC900D642F9 /* AppDelegate.swift in Sources */,
 				BA4C7A931C62CDF700D44FD8 /* City.swift in Sources */,
+				BA4C7A991C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift in Sources */,
 				BA4C7A971C62CE3F00D44FD8 /* SearchCityViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PrevisaoDoTempo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ricardo0100.PrevisaoDoTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PrevisaoDoTempo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ricardo0100.PrevisaoDoTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -11,7 +11,7 @@ import Foundation
 import Foundation
 import SWXMLHash
 
-class ApiController {
+class APIController {
     
     var delegate: SearchCityViewControllerDelegate?
     
