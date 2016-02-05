@@ -29,6 +29,15 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate
         searchBar.delegate = self
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Show Weather For City" {
+            let vc = segue.destinationViewController as! CityWeatherViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            let city = cities![index]
+            vc.showWeatherForCityWithId(city)
+        }
+    }
+    
     func listCitiesWith(cities: [City]) {
         self.cities = cities
         self.tableView.reloadData()

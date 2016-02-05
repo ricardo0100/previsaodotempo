@@ -10,9 +10,18 @@ import UIKit
 
 class CityWeatherViewController: UIViewController {
 
+    var city: City?
+    
+    @IBOutlet weak var cityName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        cityName.text = self.city!.name
+    }
+    
+    internal func showWeatherForCityWithId(city: City) {
+        self.city = city
     }
     
 }

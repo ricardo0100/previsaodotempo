@@ -55,7 +55,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Gu0-ZY-abw" kind="show" id="oTl-TZ-cdF"/>
+                                    <segue destination="Gu0-ZY-abw" kind="show" identifier="Show Weather For City" id="oTl-TZ-cdF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-i6-4fx">
-                                <rect key="frame" x="20" y="72" width="42" height="21"/>
+                                <rect key="frame" x="20" y="72" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,6 +99,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Concórdia" id="aI0-bL-Hg6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cityName" destination="oTz-i6-4fx" id="UJn-hU-blF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhJ-QY-CPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
