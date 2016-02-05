@@ -54,6 +54,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Gu0-ZY-abw" kind="show" id="oTl-TZ-cdF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -73,6 +76,34 @@
             </objects>
             <point key="canvasLocation" x="763" y="413"/>
         </scene>
+        <!--Concórdia-->
+        <scene sceneID="ZdI-sZ-CdJ">
+            <objects>
+                <viewController id="Gu0-ZY-abw" customClass="CityWeatherViewController" customModule="PrevisaoDoTempo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IdL-XA-ZxK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ncf-85-yDa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tlV-uX-RdD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-i6-4fx">
+                                <rect key="frame" x="20" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Concórdia" id="aI0-bL-Hg6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DhJ-QY-CPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="413"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fp9-GL-IMj">
             <objects>
@@ -83,6 +114,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BH9-Qh-kXt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.40000000596046448" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

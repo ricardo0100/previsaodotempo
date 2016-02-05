@@ -9,7 +9,7 @@
 import UIKit
 import JGProgressHUD
 
-class ListOfCitiesTableViewController: UITableViewController, SearchCityViewControllerDelegate, UISearchBarDelegate {
+class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -22,7 +22,7 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityViewCont
         super.viewDidLoad()
         
         controller = APIController()
-        controller!.delegate = self
+        controller!.searchCitydelegate = self
         
         hud = JGProgressHUD(style: .Dark)
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SearchCityViewControllerDelegate {
+protocol SearchCityDelegate {
     
     func listCitiesWith(cities: [City])
     

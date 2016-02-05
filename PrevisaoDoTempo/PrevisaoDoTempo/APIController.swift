@@ -13,11 +13,12 @@ import SWXMLHash
 
 class APIController {
     
-    var delegate: SearchCityViewControllerDelegate?
+    var searchCitydelegate: SearchCityDelegate?
+    var detailCityWeather: CityWeatherDelegate?
     
     func searchForCitiesWith(cityName: String) {
         
-        delegate!.showActivityIndicator()
+        searchCitydelegate!.showActivityIndicator()
         let escapedCityName = cityName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         
         //This part of the code should be moved (Model / Gateway / Usecase / Whatever)
@@ -39,8 +40,8 @@ class APIController {
                             cityList.append(City(id: id, name: name, state: state))
                         }
                     
-                        self.delegate!.listCitiesWith(cityList)
-                        self.delegate!.hideActivityIndicator()
+                        self.searchCitydelegate!.listCitiesWith(cityList)
+                        self.searchCitydelegate!.hideActivityIndicator()
                     }
                 }
             })
