@@ -17,7 +17,7 @@ class APIController {
     
     func searchForCitiesWith(cityName: String) {
         
-        delegate!.showProgressIndicator(0)
+        delegate!.showActivityIndicator()
         let escapedCityName = cityName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         
         //This part of the code should be moved (Model / Gateway / Usecase / Whatever)
@@ -40,7 +40,7 @@ class APIController {
                         }
                     
                         self.delegate!.listCitiesWith(cityList)
-                        self.delegate!.showProgressIndicator(1)
+                        self.delegate!.hideActivityIndicator()
                     }
                 }
             })

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ListOfCitiesTableViewController: UITableViewController, SearchCityViewControllerDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var progressView: UIProgressView!
+    
+    var hud: JGProgressHUD?
     
     var controller: APIController?
     var cities: [City]?
@@ -22,6 +24,8 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityViewCont
         controller = APIController()
         controller!.delegate = self
         
+        hud = JGProgressHUD(style: .Dark)
+        
         searchBar.delegate = self
     }
     
@@ -30,8 +34,15 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityViewCont
         self.tableView.reloadData()
     }
     
-    func showProgressIndicator(progress: Float) {
-        progressView.setProgress(progress, animated: false)
+    func hideActivityIndicator() {
+        hud!.dismiss()
+    }
+    
+    func showActivityIndicator() {
+        hud!.textLabel!.text = "Buscando"
+        hud!.showInView(self.view)
+        
+        searchBar.resignFirstResponder()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -55,6 +66,10 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityViewCont
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         self.controller!.searchForCitiesWith(searchBar.text!)
+        self.navigationController!.setNavigationBarHidden(false, animated: true)
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        searchBar.resignFirstResponder()
+    }
 }
