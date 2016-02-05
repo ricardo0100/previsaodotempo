@@ -12,4 +12,6 @@ protocol SearchCityViewControllerDelegate {
     
     func listCitiesWith(cities: [City])
     
+    func showProgressIndicator(progress: Float)
+    
 }

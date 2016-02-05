@@ -17,31 +17,35 @@ class APIController {
     
     func searchForCitiesWith(cityName: String) {
         
-        if let url = NSURL(string: "http://servicos.cptec.inpe.br/XML/listaCidades?city=\(cityName)") {
-            
-            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                
-                if let dataRetrieved = data {
+        delegate!.showProgressIndicator(0)
+        let escapedCityName = cityName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        
+        //This part of the code should be moved (Model / Gateway / Usecase / Whatever)
+        if let url = NSURL(string: "http://servicos.cptec.inpe.br/XML/listaCidades?city=\(escapedCityName!)") {
+            let dataTask = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
                     
-                    let xml = SWXMLHash.parse(dataRetrieved)
+                    if let dataRetrieved = data {
+                        let xml = SWXMLHash.parse(dataRetrieved)
                     
-                    var cityList: [City] = []
+                        var cityList: [City] = []
                     
-                    for cityXML in xml["cidades"]["cidade"] {
+                        for cityXML in xml["cidades"]["cidade"] {
                         
-                        let id = Int(cityXML["id"].element!.text!)!
-                        let name = cityXML["nome"].element!.text!
-                        let state = cityXML["uf"].element!.text!
+                            let id = Int(cityXML["id"].element!.text!)!
+                            let name = cityXML["nome"].element!.text!
+                            let state = cityXML["uf"].element!.text!
                         
-                        cityList.append(City(id: id, name: name, state: state))
+                            cityList.append(City(id: id, name: name, state: state))
+                        }
+                    
+                        self.delegate!.listCitiesWith(cityList)
+                        self.delegate!.showProgressIndicator(1)
                     }
-                    
-                    self.delegate!.listCitiesWith(cityList)
-                    
                 }
-                
-            }).resume()
+            })
             
+            dataTask.resume()
         }
         
     }

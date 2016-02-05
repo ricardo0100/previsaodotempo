@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ListOfCitiesTableViewController: UITableViewController, SearchCityViewControllerDelegate {
+class ListOfCitiesTableViewController: UITableViewController, SearchCityViewControllerDelegate, UISearchBarDelegate {
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var progressView: UIProgressView!
     
     var controller: APIController?
     var cities: [City]?
@@ -19,12 +22,16 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityViewCont
         controller = APIController()
         controller!.delegate = self
         
-        controller?.searchForCitiesWith("J")
+        searchBar.delegate = self
     }
     
     func listCitiesWith(cities: [City]) {
         self.cities = cities
-        tableView.reloadData()
+        self.tableView.reloadData()
+    }
+    
+    func showProgressIndicator(progress: Float) {
+        progressView.setProgress(progress, animated: false)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -39,8 +46,15 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityViewCont
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "City cell")
-        cell.textLabel!.text = cities![indexPath.row].name
+        let cell = tableView.dequeueReusableCellWithIdentifier("City Cell", forIndexPath: indexPath)
+        let city = cities![indexPath.row]
+        cell.textLabel!.text = city.name
+        cell.detailTextLabel!.text = city.state
         return cell
     }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        self.controller!.searchForCitiesWith(searchBar.text!)
+    }
+    
 }
