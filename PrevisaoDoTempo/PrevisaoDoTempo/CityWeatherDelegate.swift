@@ -10,5 +10,9 @@ import Foundation
 
 protocol CityWeatherDelegate
 {
+    func showActivityIndicator()
     
+    func hideActivityIndicator()
+    
+    func showWeatherForCity(weather: CityWeather)
 }

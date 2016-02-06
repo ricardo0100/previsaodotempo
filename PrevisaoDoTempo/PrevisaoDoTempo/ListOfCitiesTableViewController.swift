@@ -15,21 +15,22 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate
     
     var hud: JGProgressHUD?
     
-    var controller: APIController?
+    var controller = APIController()
     var cities: [City]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        controller = APIController()
-        controller!.searchCitydelegate = self
+        controller.searchCitydelegate = self
+        searchBar.delegate = self
         
         hud = JGProgressHUD(style: .Dark)
-        
-        searchBar.delegate = self
+        hud!.textLabel!.text = "Buscando"
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        searchBar.resignFirstResponder()
+        
         if segue.identifier == "Show Weather For City" {
             let vc = segue.destinationViewController as! CityWeatherViewController
             let index = tableView.indexPathForSelectedRow!.row
@@ -48,9 +49,7 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate
     }
     
     func showActivityIndicator() {
-        hud!.textLabel!.text = "Buscando"
         hud!.showInView(self.view)
-        
         searchBar.resignFirstResponder()
     }
     
@@ -74,11 +73,12 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        self.controller!.searchForCitiesWith(searchBar.text!)
+        self.controller.searchForCitiesWith(searchBar.text!)
         self.navigationController!.setNavigationBarHidden(false, animated: true)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         searchBar.resignFirstResponder()
     }
+    
 }

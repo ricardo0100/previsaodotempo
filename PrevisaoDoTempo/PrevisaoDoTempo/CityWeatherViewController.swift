@@ -7,21 +7,43 @@
 //
 
 import UIKit
+import JGProgressHUD
 
-class CityWeatherViewController: UIViewController {
+class CityWeatherViewController: UIViewController, CityWeatherDelegate {
 
-    var city: City?
+    var hud: JGProgressHUD?
     
-    @IBOutlet weak var cityName: UILabel!
+    var city: City?
+    var controller = APIController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cityName.text = self.city!.name
+        controller.detailCityWeather = self
+        
+        hud = JGProgressHUD(style: .Dark)
+        hud!.textLabel!.text = "Buscando"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        title = city!.name
+        controller.showWeatherForCity(city!)
     }
     
     internal func showWeatherForCityWithId(city: City) {
         self.city = city
+    }
+    
+    func showActivityIndicator() {
+        hud!.showInView(self.view)
+    }
+    
+    func hideActivityIndicator() {
+        hud!.dismiss()
+    }
+    
+    func showWeatherForCity(weather: CityWeather) {
+        print(String(weather.update!.debugDescription))
     }
     
 }
