@@ -1,5 +1,5 @@
 //
-//  Weather.swift
+//  CityWeather.swift
 //  PrevisaoDoTempo
 //
 //  Created by Ricardo Gehrke Filho on 06/02/16.
@@ -11,7 +11,6 @@ import Foundation
 class CityWeather {
     
     var city: City
-    
     var update: NSDate?
     var weatherDates: [WeatherForDate]? = []
     

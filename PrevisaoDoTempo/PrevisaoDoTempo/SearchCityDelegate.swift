@@ -1,5 +1,5 @@
 //
-//  SearchCityViewControllerDelegate.swift
+//  SearchCityDelegate.swift
 //  PrevisaoDoTempo
 //
 //  Created by Ricardo Gehrke Filho on 03/02/16.
