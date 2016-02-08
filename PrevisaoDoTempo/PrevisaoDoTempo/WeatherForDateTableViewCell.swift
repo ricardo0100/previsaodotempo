@@ -18,12 +18,6 @@ class WeatherForDateTableViewCell: UITableViewCell {
 
     var weather: WeatherForDate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-    }
-    
     func showWeatherForDate(weather: WeatherForDate) {
         self.weather = weather
         updateUI()

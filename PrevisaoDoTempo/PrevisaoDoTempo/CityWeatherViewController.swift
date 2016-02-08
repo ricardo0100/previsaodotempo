@@ -1,5 +1,5 @@
 //
-//  CityWeatherViewController.swift
+//  CityWeatherTableViewController.swift
 //  PrevisaoDoTempo
 //
 //  Created by Ricardo Gehrke Filho on 05/02/16.

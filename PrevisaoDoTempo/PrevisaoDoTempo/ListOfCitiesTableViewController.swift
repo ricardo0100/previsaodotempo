@@ -9,7 +9,7 @@
 import UIKit
 import JGProgressHUD
 
-class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate, UISearchBarDelegate {
+class ListOfCitiesTableViewController: UITableViewController, UISearchBarDelegate, SearchCityDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
