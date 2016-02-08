@@ -87,16 +87,43 @@
                     <view key="view" contentMode="scaleToFill" id="tlV-uX-RdD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohm-od-rDI">
+                                <rect key="frame" x="20" y="530" width="209" height="18"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Última atualização: ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="12/07/2008">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ncf-85-yDa" firstAttribute="top" secondItem="Ohm-od-rDI" secondAttribute="bottom" constant="20" id="E3a-hj-CkQ"/>
+                            <constraint firstItem="Ohm-od-rDI" firstAttribute="leading" secondItem="tlV-uX-RdD" secondAttribute="leading" constant="20" id="tlu-v6-1cG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Concórdia" id="aI0-bL-Hg6">
                         <barButtonItem key="backBarButtonItem" title="Cidades" id="Y6o-3r-azW"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="updateLabel" destination="Ohm-od-rDI" id="LIK-TF-jfj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhJ-QY-CPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="413"/>
+            <point key="canvasLocation" x="1174" y="413"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fp9-GL-IMj">

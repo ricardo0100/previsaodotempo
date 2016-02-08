@@ -35,7 +35,7 @@ class ListOfCitiesTableViewController: UITableViewController, SearchCityDelegate
             let vc = segue.destinationViewController as! CityWeatherViewController
             let index = tableView.indexPathForSelectedRow!.row
             let city = cities![index]
-            vc.showWeatherForCityWithId(city)
+            vc.city = city
         }
     }
     

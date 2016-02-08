@@ -1,13 +1,16 @@
 PODS:
   - JGProgressHUD (1.3.1)
+  - Slash (0.1.4)
   - SWXMLHash (2.1.0)
 
 DEPENDENCIES:
   - JGProgressHUD
+  - Slash
   - SWXMLHash (~> 2.1.0)
 
 SPEC CHECKSUMS:
   JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
+  Slash: 7184f2a98e13ad62303037db3a706c88e98b197e
   SWXMLHash: 7257a358b3ab2f7a209e0b4e4cf552e8b6df5f0f
 
 COCOAPODS: 0.39.0

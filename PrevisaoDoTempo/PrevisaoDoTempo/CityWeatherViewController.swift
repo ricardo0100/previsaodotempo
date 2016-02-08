@@ -8,12 +8,18 @@
 
 import UIKit
 import JGProgressHUD
+import Slash
 
 class CityWeatherViewController: UIViewController, CityWeatherDelegate {
 
+    @IBOutlet weak var updateLabel: UILabel!
+    
+    
     var hud: JGProgressHUD?
     
     var city: City?
+    var weather: CityWeather?
+    
     var controller = APIController()
     
     override func viewDidLoad() {
@@ -26,12 +32,11 @@ class CityWeatherViewController: UIViewController, CityWeatherDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        title = city!.name
-        controller.showWeatherForCity(city!)
-    }
-    
-    internal func showWeatherForCityWithId(city: City) {
-        self.city = city
+        if let cityToShow = city {
+            title = cityToShow.name
+            controller.showWeatherForCity(cityToShow)
+        }
+        
     }
     
     func showActivityIndicator() {
@@ -43,7 +48,23 @@ class CityWeatherViewController: UIViewController, CityWeatherDelegate {
     }
     
     func showWeatherForCity(weather: CityWeather) {
-        print(String(weather.update!.debugDescription))
+        self.weather = weather
+        updateUI()
+    }
+    
+    func updateUI() {
+        updateUpdateLabel()
+    }
+    
+    func updateUpdateLabel() {
+        let str = "Última atualização: <strong>\(weather!.updateString())</strong>"
+        var attrStr: NSAttributedString?
+        do {
+            try attrStr = SLSMarkupParser.attributedStringWithMarkup(str)
+        } catch {
+            attrStr = nil
+        }
+        updateLabel.attributedText = attrStr
     }
     
 }

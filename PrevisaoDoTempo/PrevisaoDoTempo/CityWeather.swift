@@ -18,4 +18,9 @@ class CityWeather {
         self.city = city
     }
     
+    func updateString() -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.stringFromDate(update!)
+    }
 }
