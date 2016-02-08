@@ -10,10 +10,7 @@ import UIKit
 import JGProgressHUD
 import Slash
 
-class CityWeatherViewController: UIViewController, CityWeatherDelegate {
-
-    @IBOutlet weak var updateLabel: UILabel!
-    
+class CityWeatherTableViewController: UITableViewController, CityWeatherDelegate {
     
     var hud: JGProgressHUD?
     
@@ -36,7 +33,6 @@ class CityWeatherViewController: UIViewController, CityWeatherDelegate {
             title = cityToShow.name
             controller.showWeatherForCity(cityToShow)
         }
-        
     }
     
     func showActivityIndicator() {
@@ -53,18 +49,20 @@ class CityWeatherViewController: UIViewController, CityWeatherDelegate {
     }
     
     func updateUI() {
-        updateUpdateLabel()
+        tableView.reloadData()
     }
     
-    func updateUpdateLabel() {
-        let str = "Última atualização: <strong>\(weather!.updateString())</strong>"
-        var attrStr: NSAttributedString?
-        do {
-            try attrStr = SLSMarkupParser.attributedStringWithMarkup(str)
-        } catch {
-            attrStr = nil
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let weatherToShow = weather {
+            return weatherToShow.weatherDates!.count
         }
-        updateLabel.attributedText = attrStr
+        return 0
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Weather for Date Cell", forIndexPath: indexPath) as! WeatherForDateTableViewCell
+        cell.showWeatherForDate(weather!.weatherDates![indexPath.row])
+        return cell
     }
     
 }

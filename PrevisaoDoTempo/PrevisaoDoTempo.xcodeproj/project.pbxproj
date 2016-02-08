@@ -20,6 +20,7 @@
 		BA4C7A971C62CE3F00D44FD8 /* SearchCityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C7A961C62CE3F00D44FD8 /* SearchCityDelegate.swift */; };
 		BA4C7A991C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */; };
 		BA6AA23A1C66227800641067 /* WeatherForDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AA2391C66227800641067 /* WeatherForDate.swift */; };
+		BAF1CFF31C68C2340010B92D /* WeatherForDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1CFF21C68C2340010B92D /* WeatherForDateTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		BA4C7A961C62CE3F00D44FD8 /* SearchCityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityDelegate.swift; sourceTree = "<group>"; };
 		BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCitiesTableViewController.swift; sourceTree = "<group>"; };
 		BA6AA2391C66227800641067 /* WeatherForDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForDate.swift; sourceTree = "<group>"; };
+		BAF1CFF21C68C2340010B92D /* WeatherForDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForDateTableViewCell.swift; sourceTree = "<group>"; };
 		E2398AF999B8F0EA53EE0B0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				BA4C7A901C62CDDB00D44FD8 /* API */,
 				BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */,
 				BA3421091C6551A600396562 /* CityWeatherViewController.swift */,
+				BAF1CFF21C68C2340010B92D /* WeatherForDateTableViewCell.swift */,
 				BA07FF361C62CCC900D642F9 /* Main.storyboard */,
 				BA4C7A9A1C62D41C00D44FD8 /* Support Files */,
 			);
@@ -263,6 +266,7 @@
 				BA3421081C65512B00396562 /* CityWeatherDelegate.swift in Sources */,
 				BA34210A1C6551A600396562 /* CityWeatherViewController.swift in Sources */,
 				BA4C7A991C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift in Sources */,
+				BAF1CFF31C68C2340010B92D /* WeatherForDateTableViewCell.swift in Sources */,
 				BA4C7A971C62CE3F00D44FD8 /* SearchCityDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
