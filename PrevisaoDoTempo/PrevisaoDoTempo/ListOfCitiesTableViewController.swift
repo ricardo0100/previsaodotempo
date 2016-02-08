@@ -32,7 +32,7 @@ class ListOfCitiesTableViewController: UITableViewController, UISearchBarDelegat
         searchBar.resignFirstResponder()
         
         if segue.identifier == "Show Weather For City" {
-            let vc = segue.destinationViewController as! CityWeatherTableViewController
+            let vc = segue.destinationViewController as! CityWeatherViewController
             let index = tableView.indexPathForSelectedRow!.row
             let city = cities![index]
             vc.city = city

@@ -78,7 +78,7 @@ class APIController {
                         let min = Int(weather["minima"].element!.text!)!
                         let uvi = Float(weather["iuv"].element!.text!)!
                         
-                        let weatherForDate = WeatherForDate(date: date, status: status, max: max, min: min, uvi: uvi)
+                        let weatherForDate = WeatherForDate(date: date, statusCode: status, max: max, min: min, uvi: uvi)
                         
                         cityWeather.weatherDates?.append(weatherForDate)
                     }

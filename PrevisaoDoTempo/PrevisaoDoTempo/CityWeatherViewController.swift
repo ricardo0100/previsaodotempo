@@ -1,5 +1,5 @@
 //
-//  CityWeatherTableViewController.swift
+//  CityWeatherViewController.swift
 //  PrevisaoDoTempo
 //
 //  Created by Ricardo Gehrke Filho on 05/02/16.
@@ -10,7 +10,9 @@ import UIKit
 import JGProgressHUD
 import Slash
 
-class CityWeatherTableViewController: UITableViewController, CityWeatherDelegate {
+class CityWeatherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CityWeatherDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var hud: JGProgressHUD?
     
@@ -23,6 +25,8 @@ class CityWeatherTableViewController: UITableViewController, CityWeatherDelegate
         super.viewDidLoad()
         
         controller.detailCityWeather = self
+        tableView.dataSource = self
+        tableView.delegate = self
         
         hud = JGProgressHUD(style: .Dark)
         hud!.textLabel!.text = "Buscando"
@@ -52,17 +56,22 @@ class CityWeatherTableViewController: UITableViewController, CityWeatherDelegate
         tableView.reloadData()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let weatherToShow = weather {
             return weatherToShow.weatherDates!.count
         }
         return 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Weather for Date Cell", forIndexPath: indexPath) as! WeatherForDateTableViewCell
         cell.showWeatherForDate(weather!.weatherDates![indexPath.row])
         return cell
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
+    
 }
+
