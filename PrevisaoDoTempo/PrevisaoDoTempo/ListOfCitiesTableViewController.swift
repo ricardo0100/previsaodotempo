@@ -16,7 +16,14 @@ class ListOfCitiesTableViewController: UITableViewController, UISearchBarDelegat
     var hud: JGProgressHUD?
     
     var controller = APIController()
-    var cities: [City]?
+    
+    var cities: [City]? {
+        
+        didSet {
+            tableView.reloadData()
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +48,6 @@ class ListOfCitiesTableViewController: UITableViewController, UISearchBarDelegat
     
     func listCitiesWith(cities: [City]) {
         self.cities = cities
-        self.tableView.reloadData()
     }
     
     func hideActivityIndicator() {
