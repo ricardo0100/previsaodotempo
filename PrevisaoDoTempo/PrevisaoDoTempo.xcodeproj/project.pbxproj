@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B041C2E111DA33D34C776D85 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD40EEAAFE155C274C1227F /* Pods.framework */; };
+		1193726775AECE37AD0E2741 /* Pods_PrevisaoDoTempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FAE17AF70FF867FF5FD089 /* Pods_PrevisaoDoTempo.framework */; };
 		BA07FF331C62CCC900D642F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07FF321C62CCC900D642F9 /* AppDelegate.swift */; };
 		BA07FF381C62CCC900D642F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA07FF361C62CCC900D642F9 /* Main.storyboard */; };
 		BA07FF3A1C62CCC900D642F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA07FF391C62CCC900D642F9 /* Assets.xcassets */; };
@@ -24,8 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02FAE17AF70FF867FF5FD089 /* Pods_PrevisaoDoTempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrevisaoDoTempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD40EEAAFE155C274C1227F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD3A51C3F379B227A53830EF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		662E725D6F6042F6A4A31353 /* Pods-PrevisaoDoTempo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrevisaoDoTempo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrevisaoDoTempo/Pods-PrevisaoDoTempo.release.xcconfig"; sourceTree = "<group>"; };
+		A8F862DAC9E9F301DA3AC352 /* Pods-PrevisaoDoTempo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrevisaoDoTempo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrevisaoDoTempo/Pods-PrevisaoDoTempo.debug.xcconfig"; sourceTree = "<group>"; };
 		BA07FF2F1C62CCC900D642F9 /* PrevisaoDoTempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrevisaoDoTempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA07FF321C62CCC900D642F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA07FF371C62CCC900D642F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,7 +43,6 @@
 		BA4C7A981C62D2BB00D44FD8 /* ListOfCitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCitiesTableViewController.swift; sourceTree = "<group>"; };
 		BA6AA2391C66227800641067 /* WeatherForDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForDate.swift; sourceTree = "<group>"; };
 		BAF1CFF21C68C2340010B92D /* WeatherForDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForDateTableViewCell.swift; sourceTree = "<group>"; };
-		E2398AF999B8F0EA53EE0B0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,28 +50,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B041C2E111DA33D34C776D85 /* Pods.framework in Frameworks */,
+				1193726775AECE37AD0E2741 /* Pods_PrevisaoDoTempo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20A47760B5DCF68CE0C37A84 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E2398AF999B8F0EA53EE0B0D /* Pods.debug.xcconfig */,
-				AD3A51C3F379B227A53830EF /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7125902AF6584B37E8439E97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1DD40EEAAFE155C274C1227F /* Pods.framework */,
+				02FAE17AF70FF867FF5FD089 /* Pods_PrevisaoDoTempo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A76FB3A7AD344C1829B9711C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8F862DAC9E9F301DA3AC352 /* Pods-PrevisaoDoTempo.debug.xcconfig */,
+				662E725D6F6042F6A4A31353 /* Pods-PrevisaoDoTempo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BA07FF261C62CCC900D642F9 = {
@@ -78,8 +80,8 @@
 			children = (
 				BA07FF311C62CCC900D642F9 /* PrevisaoDoTempo */,
 				BA07FF301C62CCC900D642F9 /* Products */,
-				20A47760B5DCF68CE0C37A84 /* Pods */,
 				7125902AF6584B37E8439E97 /* Frameworks */,
+				A76FB3A7AD344C1829B9711C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,12 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA07FF411C62CCC900D642F9 /* Build configuration list for PBXNativeTarget "PrevisaoDoTempo" */;
 			buildPhases = (
-				BABF6ADDC5730FB3055ACD7F /* Check Pods Manifest.lock */,
+				F333ADCC214B6619409633AE /* [CP] Check Pods Manifest.lock */,
 				BA07FF2B1C62CCC900D642F9 /* Sources */,
 				BA07FF2C1C62CCC900D642F9 /* Frameworks */,
 				BA07FF2D1C62CCC900D642F9 /* Resources */,
-				72A57EE8FE695C3DB594E95C /* Embed Pods Frameworks */,
-				8B8E394AD6AA8E1891A9E3A1 /* Copy Pods Resources */,
+				F11AF0D35F651944BC0651F9 /* [CP] Embed Pods Frameworks */,
+				EC321DC434B789ABC9FB2A8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,44 +208,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		72A57EE8FE695C3DB594E95C /* Embed Pods Frameworks */ = {
+		EC321DC434B789ABC9FB2A8E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrevisaoDoTempo/Pods-PrevisaoDoTempo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8B8E394AD6AA8E1891A9E3A1 /* Copy Pods Resources */ = {
+		F11AF0D35F651944BC0651F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrevisaoDoTempo/Pods-PrevisaoDoTempo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BABF6ADDC5730FB3055ACD7F /* Check Pods Manifest.lock */ = {
+		F333ADCC214B6619409633AE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +380,7 @@
 		};
 		BA07FF421C62CCC900D642F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2398AF999B8F0EA53EE0B0D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = A8F862DAC9E9F301DA3AC352 /* Pods-PrevisaoDoTempo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PrevisaoDoTempo/Info.plist;
@@ -391,7 +393,7 @@
 		};
 		BA07FF431C62CCC900D642F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD3A51C3F379B227A53830EF /* Pods.release.xcconfig */;
+			baseConfigurationReference = 662E725D6F6042F6A4A31353 /* Pods-PrevisaoDoTempo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PrevisaoDoTempo/Info.plist;
